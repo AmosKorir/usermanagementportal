@@ -1,4 +1,7 @@
 package chamelion.chamelophone.com.usermanagementportal.ui.di;
 
-interface MyExample {
+public interface MyExample {
+
+  long getDate();
+
 }

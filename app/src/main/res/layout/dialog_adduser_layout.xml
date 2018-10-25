@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
 
-</android.support.constraint.ConstraintLayout>
+
+  <EditText
+      android:id="@+id/name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/blue_border"
+      android:ems="10"
+      android:hint="@string/name"
+      android:inputType="textPersonName"
+      android:padding="@dimen/dimen_8"
+      />
+  <EditText
+      android:id="@+id/job"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen_8"
+      android:background="@drawable/blue_border"
+      android:ems="10"
+      android:hint="@string/job"
+      android:inputType="textPersonName"
+      android:padding="@dimen/dimen_8"
+      />
+</LinearLayout>

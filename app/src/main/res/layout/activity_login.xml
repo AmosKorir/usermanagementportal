@@ -5,12 +5,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".ui.LoginActivity"
     >
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:background="@android:color/white"
+      android:orientation="vertical"
       >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimens_30"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:src="@mipmap/ic_launcher_round"
+        tools:src="@tools:sample/avatars"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_300"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="100dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        >
+      <android.support.v7.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="@dimen/dimen_8"
+          app:cardElevation="@dimen/dimen_8"
+          >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimens_30"
+            android:orientation="vertical"
+            >
+          <EditText
+              android:id="@+id/LoginEmail"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_8"
+              android:background="@drawable/blue_border"
+
+              android:hint="@string/email"
+              android:inputType="textWebEmailAddress"
+              android:padding="@dimen/dimen_8"
+              />
+          <EditText
+              android:id="@+id/LoginPassword"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dimen_8"
+              android:background="@drawable/blue_border"
+              android:hint="@string/password"
+              android:inputType="textPassword"
+              android:padding="8dp"
+              />
+          <Button
+              android:id="@+id/LoginButton"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorBlue"
+              android:text="@string/login"
+              android:textColor="@android:color/white"
+              />
+          <Button
+              android:id="@+id/RegisterBtn"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dimen_8"
+              android:background="@drawable/blue_border"
+              android:text="@string/register"
+              />
+        </LinearLayout>
+      </android.support.v7.widget.CardView>
+    </LinearLayout>
   </LinearLayout>
 
 
