@@ -1,3 +1,13 @@
 <resources>
   <string name="app_name">User Management Portal</string>
+  <string name="email">Email</string>
+  <string name="password">password</string>
+  <string name="register">Register</string>
+  <string name="login">Login</string>
+  <string name="success">Success</string>
+  <string name="job">Job</string>
+  <string name="name">Name</string>
+  <string name="add_person">Add a Person</string>
+  <string name="ok">OK</string>
+  <string name="cancel">Cancel</string>
 </resources>
