@@ -1,6 +1,7 @@
 package chamelion.chamelophone.com.usermanagementportal.data;
 
 import chamelion.chamelophone.com.usermanagementportal.data.datamodel.Token;
+import chamelion.chamelophone.com.usermanagementportal.data.datamodel.UpdateUser;
 import chamelion.chamelophone.com.usermanagementportal.data.datamodel.UseDataList;
 import chamelion.chamelophone.com.usermanagementportal.data.datamodel.UserData;
 import retrofit2.Call;
@@ -26,4 +27,7 @@ public interface ApiEndPointInterface {
 
   @GET("/api/users?page=2")
   Call<UseDataList> getPersons();
+
+  @PUT("/api/users/2")
+  Call<UpdateUser> updatePerson(@Field("name") String name, @Field("job") String job);
 }

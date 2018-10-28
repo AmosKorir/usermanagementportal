@@ -10,11 +10,6 @@ import dagger.Provides;
 
 @Module class MyModule {
 
-  @Provides
-  @Singleton
-  static MyExample provideMyExample() {
-    return new MyExampleImpl();
-  }
 
   @Provides
   static LoginPresenter provideLoginPresenter() {

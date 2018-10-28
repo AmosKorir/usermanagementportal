@@ -1,5 +1,6 @@
 package chamelion.chamelophone.com.usermanagementportal.ui;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -20,6 +21,8 @@ public class ListUsersActvity extends AppCompatActivity implements ListUserActiv
 
   @BindView(R.id.userlist) ListView listView;
 
+  ProgressDialog progressDialog;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -27,6 +30,8 @@ public class ListUsersActvity extends AppCompatActivity implements ListUserActiv
 
     ((MyApplication) getApplication())
         .getMyComponent().inject(ListUsersActvity.this);
+    progressDialog=new ProgressDialog(this);
+    progressDialog.setMessage(getString(R.string.pleasewait));
 
     ButterKnife.bind(this);
     listUserActivityPresenter.setView(this);
@@ -38,6 +43,7 @@ public class ListUsersActvity extends AppCompatActivity implements ListUserActiv
   }
 
   @Override public void loadList(ArrayList<Data> arrayList) {
+    progressDialog.dismiss();
     PersonAdapter adapter = new PersonAdapter(this, R.layout.user_item_layout, arrayList);
     listView.setAdapter(adapter);
   }

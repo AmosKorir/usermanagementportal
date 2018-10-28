@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,142 +9,122 @@
     >
   <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="400dp"
       android:orientation="vertical"
       >
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:padding="5dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         >
-      <android.support.v7.widget.CardView
 
-          android:layout_width="wrap_content"
-          android:layout_height="match_parent"
-          android:layout_margin="4dp"
-          android:layout_weight="0.5"
+      <LinearLayout
+          android:id="@+id/linearLayout"
+          android:layout_width="384dp"
+          android:layout_height="200dp"
+          android:background="@color/colorBlue"
+          android:orientation="vertical"
           >
-        <LinearLayout
-            android:id="@+id/addcard"
-            android:layout_width="@dimen/dimens_200"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            >
-          <ImageButton
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:background="@android:color/white"
-              app:srcCompat="@drawable/ic_edit_black_24dp"
-              />
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:padding="@dimen/dimen_8"
-              android:text="Add "
-              android:textAlignment="center"
-              android:textColor="@color/colorBlue"
-              />
-        </LinearLayout>
-      </android.support.v7.widget.CardView>
-      <android.support.v7.widget.CardView
-          android:layout_width="wrap_content"
-          android:layout_height="match_parent"
-          android:layout_margin="4dp"
-          android:layout_weight="0.5"
+      </LinearLayout>
+      <LinearLayout
+          android:id="@+id/linearLayout2"
+          android:layout_width="0dp"
+          android:layout_height="150dp"
+          android:layout_marginEnd="30dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginRight="30dp"
+          android:layout_marginStart="30dp"
+          android:layout_marginTop="16dp"
+          android:orientation="horizontal"
+          android:padding="5dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/imageView2"
+          app:layout_constraintTop_toTopOf="parent"
           >
-        <LinearLayout
-            android:id="@+id/listcard"
-            android:layout_width="@dimen/dimens_200"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            >
-          <ImageButton
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:background="@android:color/white"
-              app:srcCompat="@drawable/ic_edit_black_24dp"
-              />
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:padding="@dimen/dimen_8"
-              android:text="List"
-              android:textAlignment="center"
-              android:textColor="@color/colorBlue"
-              />
-        </LinearLayout>
-      </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        >
-      <android.support.v7.widget.CardView
-          android:layout_width="wrap_content"
-          android:layout_height="match_parent"
-          android:layout_margin="4dp"
-          android:layout_weight="0.5"
-          >
-        <LinearLayout
-            android:layout_width="@dimen/dimens_200"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
+            android:layout_margin="4dp"
+            android:layout_weight="0.5"
             >
-          <ImageButton
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:background="@android:color/white"
-              app:srcCompat="@drawable/ic_edit_black_24dp"
-              />
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:padding="@dimen/dimen_8"
-              android:text="Add "
-              android:textAlignment="center"
-              android:textColor="@color/colorBlue"
-              />
-        </LinearLayout>
-      </android.support.v7.widget.CardView>
-      <android.support.v7.widget.CardView
-          android:layout_width="wrap_content"
-          android:layout_height="match_parent"
-          android:layout_margin="4dp"
-          android:layout_weight="0.5"
-          >
-        <LinearLayout
-            android:layout_width="@dimen/dimens_200"
+          <LinearLayout
+              android:id="@+id/addcard"
+              android:layout_width="150dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+              >
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:srcCompat="@drawable/ic_edit_black_24dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_8"
+                android:text="Add "
+                android:textAlignment="center"
+                android:textColor="@color/colorBlue"
+                />
+          </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
+            android:layout_margin="4dp"
+            android:layout_weight="0.5"
             >
-          <ImageButton
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:background="@android:color/white"
-              app:srcCompat="@drawable/ic_edit_black_24dp"
-              />
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:padding="@dimen/dimen_8"
-              android:text="List"
-              android:textAlignment="center"
-              android:textColor="@color/colorBlue"
-              />
-        </LinearLayout>
-      </android.support.v7.widget.CardView>
+          <LinearLayout
+              android:id="@+id/listcard"
+              android:layout_width="150dp"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+              >
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:srcCompat="@drawable/ic_format_list_bulleted_black_24dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_8"
+                android:text="List"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlue"
+                />
+          </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-    </LinearLayout>
+      </LinearLayout>
+      <ImageView
+          android:id="@+id/imageView2"
+          android:layout_width="72dp"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginRight="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="16dp"
+          app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@mipmap/ic_launcher_round"
+          />
+    </android.support.constraint.ConstraintLayout>
 
 
   </LinearLayout>
 
-</ScrollView>
+</LinearLayout>

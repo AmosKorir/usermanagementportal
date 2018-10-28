@@ -10,4 +10,5 @@
   <string name="add_person">Add a Person</string>
   <string name="ok">OK</string>
   <string name="cancel">Cancel</string>
+  <string name="pleasewait">Please wait...</string>
 </resources>
