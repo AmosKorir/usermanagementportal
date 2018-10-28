@@ -1,5 +1,6 @@
 package chamelion.chamelophone.com.usermanagementportal.ui;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,11 +13,10 @@ import butterknife.OnClick;
 import chamelion.chamelophone.com.usermanagementportal.R;
 import chamelion.chamelophone.com.usermanagementportal.presentation.LoginPresenter;
 import chamelion.chamelophone.com.usermanagementportal.ui.di.MyApplication;
-import chamelion.chamelophone.com.usermanagementportal.ui.di.MyExample;
 import javax.inject.Inject;
 
 public class LoginActivity extends AppCompatActivity implements LoginPresenter.mView {
-  @Inject MyExample mMyExample;
+
   @Inject LoginPresenter loginPresenter;
 
   @BindView(R.id.LoginEmail) EditText email;
@@ -25,6 +25,8 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.m
   private String mPassword;
   private String mEmail;
 
+  ProgressDialog progressDialog;
+
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_login);
@@ -32,11 +34,15 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.m
         .getMyComponent().inject(LoginActivity.this);
     ButterKnife.bind(this);
 
+    progressDialog=new ProgressDialog(this);
+    progressDialog.setMessage(getString(R.string.pleasewait));
+
     loginPresenter.setView(this);
   }
 
   @OnClick(R.id.LoginButton)
   public void login() {
+    progressDialog.show();
     mEmail = email.getText().toString().trim();
     mPassword = password.getText().toString().trim();
     loginPresenter.authUser(mEmail, mPassword);
@@ -48,10 +54,16 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.m
   }
 
   @Override public void sucess() {
+    progressDialog.dismiss();
+    startActivity(new Intent(this,DashBoard.class));
     Toast.makeText(this, R.string.success, Toast.LENGTH_SHORT).show();
+    finish();
   }
 
   @Override public void failed(String message) {
+    progressDialog.dismiss();
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
+
+
 }

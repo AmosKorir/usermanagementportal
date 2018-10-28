@@ -1,7 +1,7 @@
 package chamelion.chamelophone.com.usermanagementportal.data;
 
 import chamelion.chamelophone.com.usermanagementportal.data.datamodel.Token;
-
+import chamelion.chamelophone.com.usermanagementportal.data.datamodel.UpdateUser;
 import chamelion.chamelophone.com.usermanagementportal.data.datamodel.UseDataList;
 import chamelion.chamelophone.com.usermanagementportal.data.datamodel.UserData;
 import javax.inject.Inject;
@@ -46,5 +46,17 @@ public class ApiRepository {
     initMethod();
     Call<UseDataList> call = apiInterface.getPersons();
     return call;
+  }
+
+  public Call<UpdateUser> updateUser(String name, String job) {
+    initMethod();
+    Call<UpdateUser> call = apiInterface.updatePerson(name, job);
+    return call;
+  }
+
+  public Call<Token> logikn(String email,String password){
+    Call<Token> call=apiInterface.loginAdmin(email,password);
+    return call;
+
   }
 }
