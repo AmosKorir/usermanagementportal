@@ -46,7 +46,6 @@ public class Admin {
       return this;
     }
 
-
     public Builder withPassword(String val) {
       password = val;
       return this;
