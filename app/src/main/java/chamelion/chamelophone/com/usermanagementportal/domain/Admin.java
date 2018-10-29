@@ -33,6 +33,7 @@ public class Admin {
     this.password = password;
   }
 
+
   public static final class Builder {
     private String email;
     private String password;
