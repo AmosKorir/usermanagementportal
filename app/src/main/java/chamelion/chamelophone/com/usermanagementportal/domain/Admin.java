@@ -1,6 +1,6 @@
 package chamelion.chamelophone.com.usermanagementportal.domain;
 
-public class Admin {
+public class cbmnbvncbAdmin {
   private String email;
 
   private String password;
