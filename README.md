@@ -8,6 +8,7 @@ The following libraries have been used within the application
 4.ButterKnife
 5 Picasso
 
+
 The application has the following structure.
 ui- for all the activitiies that make the user interface
 Data -fetching data from the api
