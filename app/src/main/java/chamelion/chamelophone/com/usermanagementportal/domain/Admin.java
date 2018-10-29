@@ -41,7 +41,6 @@ public class Admin {
     private Builder() {
     }
 
-
     public Builder withEmail(String val) {
       email = val;
       return this;
